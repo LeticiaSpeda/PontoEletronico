@@ -1,10 +1,12 @@
 import UIKit
 
 final class HomeViewController: UIViewController, ViewCode {
-
+    
+    // MARK: - Attributes
     private var timer: Timer?
     private var timerFormatter = FormatTimeDate()
 
+    //MARK: - Components
     private lazy var keepTimeView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 260/2
@@ -35,16 +37,18 @@ final class HomeViewController: UIViewController, ViewCode {
         return button
     }()
 
+    // MARK: - lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        commonInit()
         configureTime()
+        commonInit()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         timer?.invalidate()
     }
 
+    // MARK: - Helpers
     @objc
     func updateTime() {
         let timeNow = timerFormatter.getTime(Date())
