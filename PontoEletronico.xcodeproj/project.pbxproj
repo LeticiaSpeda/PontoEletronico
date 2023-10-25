@@ -13,6 +13,7 @@
 		E02BE0EA2AE92F1500D4B50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02BE0E92AE92F1500D4B50F /* Assets.xcassets */; };
 		E02BE0ED2AE92F1500D4B50F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02BE0EB2AE92F1500D4B50F /* LaunchScreen.storyboard */; };
 		E02BE0F92AE935DA00D4B50F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BE0F82AE935DA00D4B50F /* UIView+Extensions.swift */; };
+		E02BE0FC2AE93DE200D4B50F /* FormatTimeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BE0FB2AE93DE200D4B50F /* FormatTimeDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E02BE0EC2AE92F1500D4B50F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E02BE0EE2AE92F1500D4B50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E02BE0F82AE935DA00D4B50F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E02BE0FB2AE93DE200D4B50F /* FormatTimeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatTimeDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E02BE0F62AE935B100D4B50F /* Home */,
+				E02BE0FA2AE93DAB00D4B50F /* Model */,
 				E02BE0F72AE935C100D4B50F /* Extensions */,
 				E02BE0F42AE9329700D4B50F /* Aplication */,
 				E02BE0F52AE932B300D4B50F /* Assets */,
@@ -97,6 +100,14 @@
 				E02BE0F82AE935DA00D4B50F /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E02BE0FA2AE93DAB00D4B50F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E02BE0FB2AE93DE200D4B50F /* FormatTimeDate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02BE0E52AE92F1100D4B50F /* HomeViewController.swift in Sources */,
+				E02BE0FC2AE93DE200D4B50F /* FormatTimeDate.swift in Sources */,
 				E02BE0E12AE92F1100D4B50F /* AppDelegate.swift in Sources */,
 				E02BE0F92AE935DA00D4B50F /* UIView+Extensions.swift in Sources */,
 				E02BE0E32AE92F1100D4B50F /* SceneDelegate.swift in Sources */,
