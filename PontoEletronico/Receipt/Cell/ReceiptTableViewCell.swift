@@ -94,6 +94,7 @@ final class ReceiptTableViewCell: UITableViewCell, ViewCode {
     }
     func configureStyle() {
         backgroundColor = #colorLiteral(red: 0.3190990388, green: 0.3008719683, blue: 0.6852146387, alpha: 1)
+        selectionStyle = .none
     }
 
 }
