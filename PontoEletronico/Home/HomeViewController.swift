@@ -38,11 +38,13 @@ final class HomeViewController: UIViewController, ViewCode {
     }()
 
     // MARK: - lifeCycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTime()
         commonInit()
+        configureTime()
     }
+
 
     override func viewDidDisappear(_ animated: Bool) {
         timer?.invalidate()

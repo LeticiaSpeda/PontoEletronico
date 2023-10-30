@@ -16,6 +16,7 @@
 		E02BE0FC2AE93DE200D4B50F /* FormatTimeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BE0FB2AE93DE200D4B50F /* FormatTimeDate.swift */; };
 		E02BE1012AE9617200D4B50F /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BE1002AE9617200D4B50F /* HomeTabBarViewController.swift */; };
 		E02BE1052AE96B4D00D4B50F /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BE1042AE96B4D00D4B50F /* ReceiptViewController.swift */; };
+		E0F406052AEFEEDE00D0AFA6 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F406042AEFEEDE00D0AFA6 /* ReceiptTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E02BE0FB2AE93DE200D4B50F /* FormatTimeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatTimeDate.swift; sourceTree = "<group>"; };
 		E02BE1002AE9617200D4B50F /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		E02BE1042AE96B4D00D4B50F /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		E0F406042AEFEEDE00D0AFA6 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +137,18 @@
 		E02BE1032AE96B2900D4B50F /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
+				E0F406032AEFEEC300D0AFA6 /* Cell */,
 				E02BE1042AE96B4D00D4B50F /* ReceiptViewController.swift */,
 			);
 			path = Receipt;
+			sourceTree = "<group>";
+		};
+		E0F406032AEFEEC300D0AFA6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E0F406042AEFEEDE00D0AFA6 /* ReceiptTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 				E02BE0FC2AE93DE200D4B50F /* FormatTimeDate.swift in Sources */,
 				E02BE0E12AE92F1100D4B50F /* AppDelegate.swift in Sources */,
 				E02BE1012AE9617200D4B50F /* HomeTabBarViewController.swift in Sources */,
+				E0F406052AEFEEDE00D0AFA6 /* ReceiptTableViewCell.swift in Sources */,
 				E02BE1052AE96B4D00D4B50F /* ReceiptViewController.swift in Sources */,
 				E02BE0F92AE935DA00D4B50F /* UIView+Extensions.swift in Sources */,
 				E02BE0E32AE92F1100D4B50F /* SceneDelegate.swift in Sources */,
