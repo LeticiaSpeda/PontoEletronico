@@ -18,10 +18,12 @@ final class HomeTabBarViewController: UITabBarController {
         receiptController.tabBarItem.image = UIImage(
             systemName:"doc.text"
         )
+        receiptController.tabBarItem.title = "Recibos"
         self.setViewControllers([homeController, receiptController], animated: true)
 
         selectedViewController = homeController
 
+        tabBar.unselectedItemTintColor = .white.withAlphaComponent(0.6)
         tabBar.backgroundColor = #colorLiteral(red: 0.2470588235, green: 0.2352941176, blue: 0.5450980392, alpha: 1)
         tabBar.tintColor = .white
     }

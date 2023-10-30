@@ -94,6 +94,4 @@ final class HomeViewController: UIViewController, ViewCode {
     func configureStyle() {
         view.backgroundColor = #colorLiteral(red: 0.3402957023, green: 0.3199218112, blue: 0.7291272096, alpha: 0.9389486755)
     }
-
 }
-
