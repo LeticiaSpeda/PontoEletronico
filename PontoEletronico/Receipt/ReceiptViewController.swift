@@ -43,7 +43,7 @@ final class ReceiptViewController: UIViewController, ViewCode {
         commonInit()
     }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         view.addSubview(photoView)
         view.addSubview(receiptLabel)
         view.addSubview(receiptTableView)
@@ -51,7 +51,7 @@ final class ReceiptViewController: UIViewController, ViewCode {
         photoView.addSubview(photoImageView)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             photoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 22),
              photoView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -72,7 +72,7 @@ final class ReceiptViewController: UIViewController, ViewCode {
         ])
     }
 
-    func configureStyle() {
+    func setupStyle() {
         view.backgroundColor = #colorLiteral(red: 0.3402957023, green: 0.3199218112, blue: 0.7291272096, alpha: 0.9389486755)
     }
 

@@ -46,7 +46,7 @@ final class ReceiptTableViewCell: UITableViewCell, ViewCode {
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         contentView.addSubview(registerView)
 
         registerView.addSubview(registerStatusLabel)
@@ -54,7 +54,7 @@ final class ReceiptTableViewCell: UITableViewCell, ViewCode {
         registerView.addSubview(registrationDataLabel)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
 
             registerView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -92,7 +92,7 @@ final class ReceiptTableViewCell: UITableViewCell, ViewCode {
             registerView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
-    func configureStyle() {
+    func setupStyle() {
         backgroundColor = #colorLiteral(red: 0.3190990388, green: 0.3008719683, blue: 0.6852146387, alpha: 1)
         selectionStyle = .none
     }

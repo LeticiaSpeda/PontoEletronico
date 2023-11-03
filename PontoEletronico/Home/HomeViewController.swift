@@ -5,6 +5,8 @@ final class HomeViewController: UIViewController, ViewCode {
     // MARK: - Attributes
     private var timer: Timer?
     private var timerFormatter = FormatTimeDate()
+    private lazy var camera = Camera()
+    private lazy var imageController = UIImagePickerController()
 
     //MARK: - Components
     private lazy var keepTimeView: UIView = {
@@ -42,7 +44,8 @@ final class HomeViewController: UIViewController, ViewCode {
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
-        configureTime()
+        setupTime()
+        setupActions()
     }
 
 
@@ -57,17 +60,31 @@ final class HomeViewController: UIViewController, ViewCode {
         presentsTimeTableLabel.text = timeNow
     }
 
-    func configureTime() {
+    @objc func tappedRegisterPointButton() {
+        tryOpenCamera()
+    }
+
+    private func tryOpenCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            camera.openCamera(self, imageController)
+        }
+    }
+
+    private func setupActions() {
+        registerPoint.addTarget(self, action: #selector(tappedRegisterPointButton), for: .touchUpInside)
+    }
+
+    func setupTime() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
 
-    func configureHierarchy() {
+    func setupHierarchy() {
         view.addSubview(keepTimeView)
         view.addSubview(registerPoint)
         keepTimeView.addSubview(presentsTimeTableLabel)
     }
 
-    func configureConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             keepTimeView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             keepTimeView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -93,7 +110,7 @@ final class HomeViewController: UIViewController, ViewCode {
         ])
     }
 
-    func configureStyle() {
+    func setupStyle() {
         view.backgroundColor = #colorLiteral(red: 0.3402957023, green: 0.3199218112, blue: 0.7291272096, alpha: 0.9389486755)
     }
 }
